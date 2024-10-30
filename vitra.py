@@ -1,10 +1,8 @@
-# Add Read HuggingFace Token to download weight models
-from kaggle_secrets import UserSecretsClient
-from huggingface_hub.hf_api import HfFolder
 
-# Get HF Token, please add HF read token to Kaggle secret, or token = "hf..."
-token = UserSecretsClient().get_secret("HF_TOKEN") 
+from huggingface_hub import HfFolder
 
+# Set the Hugging Face token directly
+token = "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"
 HfFolder.save_token(token)
 
 # Clone the repository and install the packages of vistral-V
